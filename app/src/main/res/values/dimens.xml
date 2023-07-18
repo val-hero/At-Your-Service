@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- margins -->
     <dimen name="main_horizontal_margin">18dp</dimen>
     <dimen name="secondary_horizontal_margin">30dp</dimen>
@@ -22,4 +23,13 @@
     <dimen name="edit_text_corners_radius">8dp</dimen>
     <dimen name="button_corners_radius">12dp</dimen>
 
+=======
+    <!-- Text sizes -->
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="middle_text_size">12sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+
+    <!-- Card sizes -->
+    <dimen name="user_photo_size">54sp</dimen>
+>>>>>>> 841e00d (ui: создан шаблон карточки специалиста)
 </resources>

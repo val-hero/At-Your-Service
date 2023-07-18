@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
 
     <style name="header_title">
         <item name="android:textSize">@dimen/title_text</item>
@@ -31,4 +32,10 @@
         <item name="android:background">@drawable/button_background</item>
     </style>
 
+=======
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">27dp</item>
+    </style>
+>>>>>>> 841e00d (ui: создан шаблон карточки специалиста)
 </resources>
