@@ -27,6 +27,7 @@
 
         app:itemTextColor="@drawable/bottom_nav_color_mode"
         app:itemIconTint="@drawable/bottom_nav_color_mode"
+        app:labelVisibilityMode="unlabeled"
 
         android:background="@drawable/shape_for_bottom_nav"
 
