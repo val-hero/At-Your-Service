@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#16161A</color>
+    <color name="for_editText">#BEBEBE</color>
+
 </resources>
