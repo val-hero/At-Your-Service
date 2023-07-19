@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_black">#16161A</color>
+    <color name="gray">#2B2B2C</color>
+    <color name="light_gray">#BEBEBE</color>
+
+    <!-- Эти два используются как отдельно, так и совмещаются в градиент -->
+    <color name="peach">#FF6E6E</color>
+    <color name="orange">#FB9A62</color>
+
 </resources>

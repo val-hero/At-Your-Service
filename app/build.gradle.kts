@@ -42,6 +42,11 @@ dependencies {
     implementation("com.google.android.material:material:1.5.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
+
     //MVVM
     val lifecycleVer = "2.6.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVer}")

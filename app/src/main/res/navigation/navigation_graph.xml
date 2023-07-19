@@ -2,11 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_graf"
-    app:startDestination="@id/registrationFragment2">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/blankFragment">
+
     <fragment
-        android:id="@+id/registrationFragment2"
-        android:name="com.atyourservice.RegistrationFragment"
+        android:id="@+id/registrationFragment"
+        android:name="com.atyourservice.auth.registration.ui.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
+
 </navigation>
