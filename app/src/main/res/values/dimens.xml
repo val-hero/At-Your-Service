@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Text sizes -->
-    <dimen name="text_size">16sp</dimen>
-    <dimen name="middle_text_size">12sp</dimen>
-    <dimen name="small_text_size">10sp</dimen>
+    <!-- margins -->
+    <dimen name="main_horizontal_margin">18dp</dimen>
+    <dimen name="secondary_horizontal_margin">30dp</dimen>
+    <dimen name="main_vertical_margin">26dp</dimen>
+    <dimen name="same_items_vertical_margin">10dp</dimen>
+    <dimen name="button_vertical_margin">48dp</dimen>
 
-    <!-- Card sizes -->
-    <dimen name="user_photo_size">54sp</dimen>
+    <!-- font -->
+    <dimen name="title_text">22sp</dimen>
+    <dimen name="button_text">22sp</dimen>
+    <dimen name="main_action_text">20sp</dimen>
+    <dimen name="regular_text">16sp</dimen>
+    <dimen name="secondary_text">12sp</dimen>
+    <dimen name="additional_text">10sp</dimen>
+
+    <!-- items height -->
+    <dimen name="edit_text_height">48dp</dimen>
+
+    <!-- radius -->
+    <dimen name="edit_text_corners_radius">8dp</dimen>
+    <dimen name="button_corners_radius">12dp</dimen>
+
+
+    <dimen name="user_photo_size">54dp</dimen>
+
 </resources>
