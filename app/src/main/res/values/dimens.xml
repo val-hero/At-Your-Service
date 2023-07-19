@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margins -->
+    <dimen name="main_horizontal_margin">18dp</dimen>
+    <dimen name="secondary_horizontal_margin">30dp</dimen>
+    <dimen name="main_vertical_margin">26dp</dimen>
+    <dimen name="same_items_vertical_margin">10dp</dimen>
+
+    <!-- font -->
+    <dimen name="title_text">22sp</dimen>
+    <dimen name="main_action_text">20sp</dimen>
+    <dimen name="regular_text">16sp</dimen>
+    <dimen name="secondary_text">12sp</dimen>
+    <dimen name="additional_text">10sp</dimen>
+</resources>
