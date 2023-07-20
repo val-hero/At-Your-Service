@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <!-- margins -->
     <dimen name="main_horizontal_margin">18dp</dimen>
     <dimen name="secondary_horizontal_margin">30dp</dimen>
@@ -31,5 +30,4 @@
 
     <!-- Card sizes -->
     <dimen name="user_photo_size">54sp</dimen>
->>>>>>> 841e00d (ui: создан шаблон карточки специалиста)
 </resources>
