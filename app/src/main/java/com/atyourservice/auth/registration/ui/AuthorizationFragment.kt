@@ -1,4 +1,4 @@
-package com.atyourservice
+package com.atyourservice.auth.registration.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
