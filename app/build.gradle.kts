@@ -44,6 +44,11 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
 
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
+
     //MVVM
     val lifecycleVer = "2.6.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVer}")
@@ -58,6 +63,7 @@ dependencies {
     //Google Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
     implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
 
     //Retrofit + Gson
 //    val retrofitVer = "2.9.0"
