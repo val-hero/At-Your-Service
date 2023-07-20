@@ -41,7 +41,7 @@
         android:layout_marginStart="12dp"
         android:fontFamily="@font/kadwa_font"
         android:textColor="@color/white"
-        android:textSize="@dimen/additional_text"
+        android:textSize="@dimen/secondary_text"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imUserPhoto"
