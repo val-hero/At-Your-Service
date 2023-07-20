@@ -22,4 +22,7 @@
     <dimen name="edit_text_corners_radius">8dp</dimen>
     <dimen name="button_corners_radius">12dp</dimen>
 
+
+    <dimen name="user_photo_size">54dp</dimen>
+
 </resources>
