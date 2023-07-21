@@ -1,4 +1,4 @@
-package com.atyourservice.auth.registration.ui
+package com.atyourservice.auth.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

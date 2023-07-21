@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/light_black"
+    tools:context="com.atyourservice.auth.ui.AuthorizationFragment">
+
+    <ImageView
+        android:id="@+id/logo_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="70dp"
+        app:cornerRadius="@dimen/button_corners_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_placeholder" />
+
+    <Button
+        android:id="@+id/sign_in_with_google_button"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_google"
+        android:gravity="center|start"
+        android:paddingLeft="0dp"
+        android:text="@string/sign_in_with_google"
+        android:textColor="@color/black"
+        android:textSize="@dimen/regular_text"
+        app:cornerRadius="@dimen/edit_text_corners_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_placeholder" />
+
+    <TextView
+        android:id="@+id/enter_with_your_account_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/secondary_horizontal_margin"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/kadwa_regular"
+        android:gravity="center"
+        android:text="@string/or_enter_with_your_account"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_action_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_google_button" />
+
+    <EditText
+        android:id="@+id/email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/secondary_horizontal_margin"
+        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:background="@drawable/rounded_edittext_background"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="@dimen/edit_text_drawable_padding"
+        android:fontFamily="@font/kadwa_regular"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="@dimen/edit_text_padding"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_with_your_account_textview" />
+
+    <EditText
+        android:id="@+id/password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="@dimen/secondary_horizontal_margin"
+        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:background="@drawable/rounded_edittext_background"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="@dimen/edit_text_drawable_padding"
+        android:fontFamily="@font/kadwa_regular"
+        android:hint="@string/password"
+        android:padding="@dimen/edit_text_padding"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_editText" />
+
+    <TextView
+        android:id="@+id/forgot_password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:fontFamily="@font/kadwa_regular"
+        android:text="@string/forgot_password"
+        android:textColor="@color/white"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintStart_toStartOf="@+id/password_editText"
+        app:layout_constraintTop_toBottomOf="@+id/password_editText" />
+
+    <TextView
+        android:id="@+id/new_user_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:fontFamily="@font/kadwa_regular"
+        android:text="@string/new_user"
+        android:textColor="@color/white"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintStart_toStartOf="@+id/forgot_password_tv"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+
+    <TextView
+        android:id="@+id/create_account_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:fontFamily="@font/kadwa_regular"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/new_user_tv"
+        app:layout_constraintTop_toBottomOf="@+id/new_user_tv"
+        app:layout_constraintVertical_bias="0" />
+
+    <Button
+        android:id="@+id/sign_in_button"
+        style="@style/button_sign_in"
+        android:text="@string/sign_in"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/password_editText"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_password_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
