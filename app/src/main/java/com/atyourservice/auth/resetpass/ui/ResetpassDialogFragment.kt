@@ -22,9 +22,9 @@ class ResetpassDialogFragment: DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDialogResetpassBinding.inflate(inflater,container, false)
-        if (dialog != null && dialog?.getWindow() != null) {
-            dialog?.getWindow()!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            dialog?.getWindow()!!.requestFeature(Window.FEATURE_NO_TITLE)
+        dialog?.window?.let{
+            it.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            it.requestFeature(Window.FEATURE_NO_TITLE)
         }
         return binding.root
     }

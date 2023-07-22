@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/round_corners_shape_20dp"
-    android:backgroundTint="#2B2B2C"
+    android:backgroundTint="@color/gray"
     android:maxWidth="900dp"
     android:minWidth="360dp"
     android:orientation="vertical"
@@ -23,7 +23,7 @@
         android:singleLine="true"
         android:text="@string/text_fragment_dialog_resetting_password"
         android:textColor="@color/black"
-        android:textSize="@dimen/_20sp"
+        android:textSize="@dimen/main_action_text"
         android:fontFamily="@font/kadwa_regular"/>
 
     <TextView
@@ -37,7 +37,7 @@
         android:text="@string/text_fragment_dialog_message"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/kadwa_regular"
-        android:textSize="@dimen/_16sp"/>
+        android:textSize="@dimen/regular_text"/>
 
     <EditText
         android:labelFor="@id/edit_text_dialog_resetpass"
@@ -56,7 +56,7 @@
         android:paddingStart="@dimen/_10dp"
         android:paddingEnd="0dp"
         android:fontFamily="@font/kadwa_regular"
-        android:textSize="@dimen/_16sp"/>
+        android:textSize="@dimen/regular_text"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_send_dialog_resetpass"
@@ -70,6 +70,6 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/kadwa_regular"
-        android:textSize="@dimen/_20sp"/>
+        android:textSize="@dimen/main_action_text"/>
 
 </LinearLayout>

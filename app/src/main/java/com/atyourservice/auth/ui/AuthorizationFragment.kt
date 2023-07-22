@@ -24,9 +24,7 @@ class AuthorizationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.forgotPasswordTv.setOnClickListener {
-            val myResetpassDialogFragment = ResetpassDialogFragment()
-            val manager = parentFragmentManager
-            myResetpassDialogFragment.show(manager, TAG_RESETPASS)
+            ResetpassDialogFragment().show(childFragmentManager, TAG_RESETPASS)
         }
     }
 
