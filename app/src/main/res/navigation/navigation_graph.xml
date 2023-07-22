@@ -3,12 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/blankFragment">
+    app:startDestination="@id/authorizationFragment">
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.atyourservice.auth.registration.ui.RegistrationFragment"
+        android:name="com.atyourservice.auth.ui.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.atyourservice.auth.ui.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment2_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
 
 </navigation>

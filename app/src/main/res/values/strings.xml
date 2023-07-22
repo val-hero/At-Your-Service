@@ -10,4 +10,10 @@
     <string name="text_fragment_dialog_resetting_password">Resetting password</string>
     <string name="text_fragment_dialog_message">Please enter your email, we will send you a new password</string>
     <string name="text_fragment_dialog_text_send">Send</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="create_account"><u>Create account</u></string>
+    <string name="new_user">New user?</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or_enter_with_your_account">or enter with your account:</string>
 </resources>
