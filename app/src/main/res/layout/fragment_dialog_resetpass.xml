@@ -6,14 +6,14 @@
     android:background="@drawable/round_corners_shape_20dp"
     android:backgroundTint="#2B2B2C"
     android:maxWidth="900dp"
-    android:minWidth="300dp"
+    android:minWidth="360dp"
     android:orientation="vertical"
     tools:context="com.atyourservice.auth.resetpass.ui.ResetpassDialogFragment">
 
     <TextView
-        android:id="@+id/text_view_top"
+        android:id="@+id/text_view_top_dialog_resetpass"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_marginHorizontal="0dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/round_corners_shape_only_top_20dp"
@@ -22,10 +22,12 @@
         android:maxLines="1"
         android:singleLine="true"
         android:text="@string/text_fragment_dialog_resetting_password"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp"
+        android:fontFamily="@font/kadwa_regular"/>
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/text_view_dialog_resetpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
@@ -33,35 +35,41 @@
         android:gravity="center"
         android:maxLines="2"
         android:text="@string/text_fragment_dialog_message"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/_16sp"/>
 
     <EditText
+        android:labelFor="@id/edit_text_dialog_resetpass"
         android:autofillHints="emailAddress"
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_dialog_resetpass"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_marginStart="@dimen/_10dp"
         android:layout_marginEnd="@dimen/_10dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/round_corners_shape_10dp"
+        android:background="@drawable/rounded_edittext_background"
         android:backgroundTint="@color/white"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="@dimen/_10dp"
         android:inputType="textEmailAddress|textNoSuggestions"
         android:paddingStart="@dimen/_10dp"
-        android:paddingEnd="0dp"/>
+        android:paddingEnd="0dp"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/_16sp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/button_send_dialog_resetpass"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_gravity="end"
         android:layout_marginEnd="@dimen/_10dp"
         android:layout_marginBottom="@dimen/_10dp"
-        android:background="@drawable/round_corners_shape_12dp"
-        android:backgroundTint="#FF6E6E"
+        android:background="@drawable/button_background"
         android:text="@string/text_fragment_dialog_text_send"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/_20sp"/>
 
 </LinearLayout>

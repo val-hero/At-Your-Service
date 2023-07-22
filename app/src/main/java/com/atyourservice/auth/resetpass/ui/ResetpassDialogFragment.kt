@@ -1,15 +1,14 @@
 package com.atyourservice.auth.resetpass.ui
 
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.atyourservice.databinding.FragmentDialogResetpassBinding
 
@@ -33,19 +32,9 @@ class ResetpassDialogFragment: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button.setOnClickListener {
+        binding.buttonSendDialogResetpass.setOnClickListener {
             //для проверки работы кнопки
-            Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:")
-                putExtra(
-                    Intent.EXTRA_EMAIL,
-                    arrayOf(binding.editText.text.toString())
-                )
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                requireContext().startActivity(this)
-
-                requireDialog().cancel()
-            }
+            Toast.makeText(requireContext(), "Введен адрес: "+binding.editTextDialogResetpass.text.toString(), Toast.LENGTH_LONG).show()
         }
     }
 

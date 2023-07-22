@@ -99,7 +99,7 @@
         android:id="@+id/forgot_password_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/same_items_vertical_margin"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/kadwa_regular"
         android:text="@string/forgot_password"
         android:textColor="@color/white"

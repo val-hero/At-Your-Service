@@ -29,5 +29,8 @@
     <!-- padding -->
     <dimen name="edit_text_drawable_padding">20dp</dimen>
     <dimen name="edit_text_padding">8dp</dimen>
+    <dimen name="vertical_size_elements_dialog_resetpass">50dp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
 
 </resources>
