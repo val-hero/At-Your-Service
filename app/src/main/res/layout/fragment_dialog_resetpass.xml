@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corners_shape_20dp"
+    android:backgroundTint="@color/gray"
+    android:maxWidth="900dp"
+    android:minWidth="360dp"
+    android:orientation="vertical"
+    tools:context="com.atyourservice.auth.resetpass.ui.ResetpassDialogFragment">
+
+    <TextView
+        android:id="@+id/text_view_top_dialog_resetpass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/round_corners_shape_only_top_20dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/text_fragment_dialog_resetting_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/main_action_text"
+        android:fontFamily="@font/kadwa_regular"/>
+
+    <TextView
+        android:id="@+id/text_view_dialog_resetpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_fragment_dialog_message"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/regular_text"/>
+
+    <EditText
+        android:labelFor="@id/edit_text_dialog_resetpass"
+        android:autofillHints="emailAddress"
+        android:id="@+id/edit_text_dialog_resetpass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="@dimen/_10dp"
+        android:inputType="textEmailAddress|textNoSuggestions"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingEnd="0dp"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/regular_text"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_send_dialog_resetpass"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:background="@drawable/button_background"
+        android:text="@string/text_fragment_dialog_text_send"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/kadwa_regular"
+        android:textSize="@dimen/main_action_text"/>
+
+</LinearLayout>

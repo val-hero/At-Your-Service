@@ -21,11 +21,14 @@
     <!-- radius -->
     <dimen name="edit_text_corners_radius">8dp</dimen>
     <dimen name="button_corners_radius">12dp</dimen>
+
+    <dimen name="_10dp">10dp</dimen>
+
     <dimen name="user_photo_size">54dp</dimen>
 
     <!-- padding -->
     <dimen name="edit_text_drawable_padding">20dp</dimen>
     <dimen name="edit_text_padding">8dp</dimen>
-
+    <dimen name="vertical_size_elements_dialog_resetpass">50dp</dimen>
 
 </resources>
