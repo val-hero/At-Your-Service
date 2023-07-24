@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.atyourservice.auth.resetpass.ui.ResetpassDialogFragment
 import com.example.atyourservice.databinding.FragmentAuthorizationBinding
 
 class AuthorizationFragment : Fragment() {
 
-    lateinit var binding: FragmentAuthorizationBinding
+    private lateinit var binding: FragmentAuthorizationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

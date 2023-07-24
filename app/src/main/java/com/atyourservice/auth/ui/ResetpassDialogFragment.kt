@@ -1,4 +1,4 @@
-package com.atyourservice.auth.resetpass.ui
+package com.atyourservice.auth.ui
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,7 +14,7 @@ import com.example.atyourservice.databinding.FragmentDialogResetpassBinding
 
 class ResetpassDialogFragment: DialogFragment() {
 
-    lateinit var binding: FragmentDialogResetpassBinding
+    private lateinit var binding: FragmentDialogResetpassBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,

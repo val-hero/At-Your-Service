@@ -8,7 +8,7 @@
     android:maxWidth="900dp"
     android:minWidth="360dp"
     android:orientation="vertical"
-    tools:context="com.atyourservice.auth.resetpass.ui.ResetpassDialogFragment">
+    tools:context="com.atyourservice.auth.ui.ResetpassDialogFragment">
 
     <TextView
         android:id="@+id/text_view_top_dialog_resetpass"
