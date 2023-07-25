@@ -1,5 +1,6 @@
 package com.atyourservice.core.utils
 
+import android.content.Context
 import com.example.atyourservice.R
 
 sealed class ErrorType {
@@ -19,4 +20,17 @@ data class Details(
 fun ErrorType.getDetails(): Details = when (this) {
     is ErrorType.Auth -> Details(message = message)
     else -> Details(stringResourceId = R.string.unknown_error)
+}
+
+fun Details.toUiText(context: Context): String {
+    if (this.stringResourceId != null)
+        return context.getString(this.stringResourceId)
+
+    if (this.message != null && this.code != null)
+        return "[$code]: $message"
+
+    if (this.message != null)
+        return message
+    else
+        return code.toString()
 }
