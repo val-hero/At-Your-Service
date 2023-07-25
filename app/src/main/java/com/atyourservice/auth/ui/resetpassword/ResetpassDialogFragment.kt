@@ -1,4 +1,4 @@
-package com.atyourservice.auth.ui
+package com.atyourservice.auth.ui.resetpassword
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
