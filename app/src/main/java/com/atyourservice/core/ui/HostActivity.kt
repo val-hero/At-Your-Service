@@ -14,14 +14,23 @@ class HostActivity : AppCompatActivity() {
         binding = ActivityHostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHost = supportFragmentManager.findFragmentById(R.id.container_view) as NavHostFragment
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.container_view) as NavHostFragment
         val navController = navHost.navController
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.bottomNavigationView.isVisible = when(destination.id) {
-                R.id.authorizationFragment -> false
-                else -> true
-            }
+            bottomNavigationVisibility(destination.id)
+        }
+    }
+
+    private fun bottomNavigationVisibility(screenId: Int) {
+        binding.bottomNavigationView.isVisible = when (screenId) {
+            // сюда добавляйте id экранов, на которых нужно скрыть нижнюю навигацию
+
+            R.id.authorizationFragment,
+            R.id.registrationFragment -> { false }
+
+            else -> true
         }
     }
 }
