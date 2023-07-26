@@ -9,6 +9,8 @@ import kotlinx.coroutines.tasks.await
 class AuthRepositoryImpl(private val authClient: FirebaseAuth) : AuthRepository {
 
     override suspend fun signUp(email: String, password: String): TaskResult<Boolean> {
+        if(authClient.currentUser != null) return TaskResult.Error(ErrorType.AlreadySignedIn)
+
         return try {
             authClient.createUserWithEmailAndPassword(email, password).await()
             TaskResult.Success(true)
@@ -18,6 +20,8 @@ class AuthRepositoryImpl(private val authClient: FirebaseAuth) : AuthRepository 
     }
 
     override suspend fun signIn(email: String, password: String): TaskResult<Boolean> {
+        if(authClient.currentUser != null) return TaskResult.Error(ErrorType.AlreadySignedIn)
+
         return try {
             authClient.signInWithEmailAndPassword(email, password).await()
             TaskResult.Success(true)
@@ -41,7 +45,7 @@ class AuthRepositoryImpl(private val authClient: FirebaseAuth) : AuthRepository 
 
     private fun getAuthError(message: String?): ErrorType {
         return message?.let {
-            ErrorType.Auth(message)
+            ErrorType.AuthFailed(message)
         } ?: ErrorType.Unknown
     }
 }

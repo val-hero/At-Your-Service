@@ -4,24 +4,24 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.atyourservice.auth.domain.repository.AuthRepository
-import com.atyourservice.core.utils.TaskResult.Error
-import com.atyourservice.core.utils.TaskResult.Success
+import com.atyourservice.auth.ui.AuthFlowScreenState
+import com.atyourservice.core.utils.TaskResult
 import kotlinx.coroutines.launch
 
-class RegistrationFragmentVM(
+class RegistrationViewModel(
     private val repository: AuthRepository,
 ) : ViewModel() {
 
-    var screenState = MutableLiveData<RegistrationScreenState>()
-        private set
+    private val _screenState = MutableLiveData<AuthFlowScreenState>()
+    val screenState: MutableLiveData<AuthFlowScreenState> = _screenState
 
     fun signUpWithEmailAndPassword(email: String, password: String) = viewModelScope.launch {
-        screenState.value = RegistrationScreenState.Loading
+        _screenState.value = AuthFlowScreenState.Loading
 
         val authResult = repository.signUp(email, password)
         when (authResult) {
-            is Success -> screenState.postValue(RegistrationScreenState.SignedIn)
-            is Error -> screenState.postValue(RegistrationScreenState.Error(authResult.errorType))
+            is TaskResult.Success -> _screenState.postValue(AuthFlowScreenState.Success)
+            is TaskResult.Error -> _screenState.postValue(AuthFlowScreenState.Error(authResult.errorType))
         }
     }
 }

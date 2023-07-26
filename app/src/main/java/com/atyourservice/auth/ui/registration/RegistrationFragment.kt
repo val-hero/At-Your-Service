@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.atyourservice.auth.ui.AuthFlowScreenState
 import com.atyourservice.core.utils.getDetails
 import com.atyourservice.core.utils.toUiText
 import com.example.atyourservice.databinding.FragmentRegistrationBinding
@@ -13,7 +14,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegistrationFragment : Fragment() {
     private lateinit var binding: FragmentRegistrationBinding
-    private val viewModel by viewModel<RegistrationFragmentVM>()
+    private val viewModel by viewModel<RegistrationViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,11 +40,11 @@ class RegistrationFragment : Fragment() {
         }
     }
 
-    private fun render(state: RegistrationScreenState) {
+    private fun render(state: AuthFlowScreenState) {
         when (state) {
-            is RegistrationScreenState.Loading -> {}
+            is AuthFlowScreenState.Loading -> {}
 
-            is RegistrationScreenState.Error -> {
+            is AuthFlowScreenState.Error -> {
                 Toast.makeText(
                     requireContext(),
                     state.errorType.getDetails().toUiText(requireContext()),
@@ -51,7 +52,7 @@ class RegistrationFragment : Fragment() {
                 ).show()
             }
 
-            is RegistrationScreenState.SignedIn -> {}
+            is AuthFlowScreenState.Success -> {}
         }
     }
 }

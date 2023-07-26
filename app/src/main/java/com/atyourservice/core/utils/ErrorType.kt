@@ -4,7 +4,8 @@ import android.content.Context
 import com.example.atyourservice.R
 
 sealed class ErrorType {
-    data class Auth(val message: String) : ErrorType()
+    data class AuthFailed(val message: String) : ErrorType()
+    object AlreadySignedIn : ErrorType()
     object Unknown : ErrorType()
 
     // сюда нужно добавлять любые виды ошибок, которые хотим обработать
@@ -18,7 +19,8 @@ data class Details(
 )
 
 fun ErrorType.getDetails(): Details = when (this) {
-    is ErrorType.Auth -> Details(message = message)
+    is ErrorType.AuthFailed -> Details(message = message)
+    is ErrorType.AlreadySignedIn -> Details(stringResourceId = R.string.already_signed_in_error)
     else -> Details(stringResourceId = R.string.unknown_error)
 }
 
