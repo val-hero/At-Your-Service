@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context="com.atyourservice.search.ui.MainSearchFragment">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_user_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:foreground="@drawable/circle"
+        android:src="@drawable/mock_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageView"/>
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/kadwa_font"
+        android:text="@string/text_welcome"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/secondary_text"
+        app:layout_constraintStart_toEndOf="@+id/image_user_avatar"
+        app:layout_constraintTop_toTopOf="@+id/image_user_avatar" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:fontFamily="@font/kadwa_font"
+        android:text="John Doe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/regular_text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/text_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome"
+        tools:text="John Doe" />
+
+    <ImageView
+        android:id="@+id/image_location"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/location_icon" />
+
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="-8dp"
+        android:fontFamily="@font/kadwa_font"
+        android:textColor="@color/white"
+        android:textSize="@dimen/secondary_text"
+        android:text="@string/text_location"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/image_location"
+        app:layout_constraintEnd_toStartOf="@+id/image_location"
+        tools:text="@string/text_location"/>
+
+    <EditText
+        android:id="@+id/edit_text_search_for_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edittext_background_16dp"
+        android:drawableStart="@drawable/search"
+        android:drawableEnd="@drawable/close"
+        android:drawablePadding="8dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="17dp"
+        android:paddingVertical="8dp"
+        android:fontFamily="@font/kadwa_regular"
+        android:hint="@string/text_search_for_service"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/light_black"
+        android:textColorHint="@color/light_gray"
+        android:textSize="@dimen/regular_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_user_avatar" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_search_for_service"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout="@layout/fragment_main_started" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

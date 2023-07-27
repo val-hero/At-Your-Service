@@ -16,4 +16,10 @@
     <string name="sign_in_with_google">Sign in with Google</string>
     <string name="sign_in">Sign in</string>
     <string name="or_enter_with_your_account">or enter with your account:</string>
+    <string name="text_location"><u>Select location</u></string>
+    <string name="text_welcome">Welcome</string>
+    <string name="text_search_for_service">search for service</string>
+    <string name="text_popular_companies">Popular companies</string>
+    <string name="text_categories">Categories</string>
+    <string name="text_top_rated_experts">Top rated experts</string>
 </resources>
