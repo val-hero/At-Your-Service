@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/kadwa_regular"
             android:gravity="center_vertical"
-            android:text="@string/sing_up"
+            android:text="@string/sign_up"
             android:textColor="@color/white"
             android:textSize="22sp" />
 
