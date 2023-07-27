@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">AtYourService</string>
-    <string name="sing_up">Sing up</string>
+    <string name="sign_up">Sign up</string>
     <string name="please_tell_us_about_yourself">Please tell us about yourself</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last name</string>
@@ -16,4 +16,6 @@
     <string name="sign_in_with_google">Sign in with Google</string>
     <string name="sign_in">Sign in</string>
     <string name="or_enter_with_your_account">or enter with your account:</string>
+    <string name="unknown_error">Unexpected error occurred. Please try again</string>
+    <string name="already_signed_in_error">You already signed in</string>
 </resources>

@@ -7,16 +7,16 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.atyourservice.auth.ui.RegistrationFragment"
+        android:name="com.atyourservice.auth.ui.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="com.atyourservice.auth.ui.AuthorizationFragment"
+        android:name="com.atyourservice.auth.ui.authorization.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" >
         <action
-            android:id="@+id/action_authorizationFragment2_to_registrationFragment"
+            android:id="@+id/action_authorizationFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
     </fragment>
 
