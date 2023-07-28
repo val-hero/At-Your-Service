@@ -9,7 +9,7 @@
     tools:context="com.atyourservice.auth.ui.authorization.AuthorizationFragment">
 
     <ImageView
-        android:id="@+id/logo_placeholder"
+        android:id="@+id/auth_logo_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/ic_logo_placeholder" />
 
     <Button
-        android:id="@+id/sign_in_with_google_button"
+        android:id="@+id/auth_sign_in_with_google_button"
         android:layout_width="260dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="50dp"
@@ -36,10 +36,10 @@
         app:cornerRadius="@dimen/edit_text_corners_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_placeholder" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_logo_image" />
 
     <TextView
-        android:id="@+id/enter_with_your_account_textview"
+        android:id="@+id/auth_enter_with_account_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/secondary_horizontal_margin"
@@ -51,10 +51,10 @@
         android:textSize="@dimen/main_action_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_google_button" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_sign_in_with_google_button" />
 
     <EditText
-        android:id="@+id/email_editText"
+        android:id="@+id/auth_email_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/secondary_horizontal_margin"
@@ -72,10 +72,10 @@
         android:textSize="@dimen/regular_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_with_your_account_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_enter_with_account_text" />
 
     <EditText
-        android:id="@+id/password_editText"
+        android:id="@+id/auth_password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
@@ -93,10 +93,10 @@
         android:textSize="@dimen/regular_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/auth_email_edit_text" />
 
     <TextView
-        android:id="@+id/forgot_password_tv"
+        android:id="@+id/auth_forgot_password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -104,11 +104,11 @@
         android:text="@string/forgot_password"
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
-        app:layout_constraintStart_toStartOf="@+id/password_editText"
-        app:layout_constraintTop_toBottomOf="@+id/password_editText" />
+        app:layout_constraintStart_toStartOf="@+id/auth_password_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/auth_password_edit_text" />
 
     <TextView
-        android:id="@+id/new_user_tv"
+        android:id="@+id/auth_new_user_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/same_items_vertical_margin"
@@ -116,11 +116,11 @@
         android:text="@string/new_user"
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
-        app:layout_constraintStart_toStartOf="@+id/forgot_password_tv"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+        app:layout_constraintStart_toStartOf="@+id/auth_forgot_password_text"
+        app:layout_constraintTop_toBottomOf="@+id/auth_sign_in_button" />
 
     <TextView
-        android:id="@+id/create_account_tv"
+        android:id="@+id/auth_create_account_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/same_items_vertical_margin"
@@ -129,16 +129,16 @@
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/new_user_tv"
-        app:layout_constraintTop_toBottomOf="@+id/new_user_tv"
+        app:layout_constraintStart_toStartOf="@+id/auth_new_user_text"
+        app:layout_constraintTop_toBottomOf="@+id/auth_new_user_text"
         app:layout_constraintVertical_bias="0" />
 
     <Button
-        android:id="@+id/sign_in_button"
+        android:id="@+id/auth_sign_in_button"
         style="@style/button_sign_in"
         android:text="@string/sign_in"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="@+id/password_editText"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_password_tv" />
+        app:layout_constraintEnd_toEndOf="@+id/auth_password_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/auth_forgot_password_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

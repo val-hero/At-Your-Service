@@ -8,11 +8,11 @@
     tools:context="com.atyourservice.auth.ui.registration.RegistrationFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/registration_toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/header_title"
+        app:layout_constraintBottom_toTopOf="@+id/registration_title_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,30 +31,30 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/leftBorder"
+        android:id="@+id/left_border"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="30dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/rightBorder"
+        android:id="@+id/right_border"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="30dp" />
 
     <TextView
-        android:id="@+id/header_title"
+        android:id="@+id/registration_title_text"
         style="@style/header_title"
         android:text="@string/please_tell_us_about_yourself"
-        app:layout_constraintBottom_toTopOf="@id/firstNameEditText"
-        app:layout_constraintEnd_toEndOf="@+id/rightBorder"
-        app:layout_constraintStart_toStartOf="@+id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintBottom_toTopOf="@id/registration_first_name_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/right_border"
+        app:layout_constraintStart_toStartOf="@+id/left_border"
+        app:layout_constraintTop_toBottomOf="@id/registration_toolbar" />
 
     <EditText
-        android:id="@+id/firstNameEditText"
+        android:id="@+id/registration_first_name_edit_text"
         style="@style/edit_text"
         android:layout_gravity="center"
         android:autofillHints="name"
@@ -63,13 +63,13 @@
         android:inputType="text"
         android:lines="1"
         android:maxLength="255"
-        app:layout_constraintBottom_toTopOf="@id/lastNameEditText"
-        app:layout_constraintEnd_toEndOf="@id/rightBorder"
-        app:layout_constraintStart_toStartOf="@id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+        app:layout_constraintBottom_toTopOf="@id/registration_last_name_edit_text"
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@+id/registration_title_text" />
 
     <EditText
-        android:id="@+id/lastNameEditText"
+        android:id="@+id/registration_last_name_edit_text"
         style="@style/edit_text"
         android:layout_gravity="center"
         android:autofillHints="name"
@@ -78,13 +78,13 @@
         android:inputType="text"
         android:lines="1"
         android:maxLength="255"
-        app:layout_constraintBottom_toTopOf="@id/emailEditText"
-        app:layout_constraintEnd_toEndOf="@id/rightBorder"
-        app:layout_constraintStart_toStartOf="@id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
+        app:layout_constraintBottom_toTopOf="@id/registration_email_edit_text"
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@+id/registration_first_name_edit_text" />
 
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/registration_email_edit_text"
         style="@style/edit_text"
         android:layout_gravity="center"
         android:autofillHints="emailAddress"
@@ -93,12 +93,12 @@
         android:inputType="textEmailAddress"
         android:lines="1"
         android:maxLength="255"
-        app:layout_constraintEnd_toEndOf="@id/rightBorder"
-        app:layout_constraintStart_toStartOf="@id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@+id/registration_last_name_edit_text" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/registration_password_edit_text"
         style="@style/edit_text"
         android:layout_gravity="center"
         android:autofillHints="password"
@@ -107,16 +107,16 @@
         android:inputType="textPassword"
         android:lines="1"
         android:maxLength="255"
-        app:layout_constraintEnd_toEndOf="@id/rightBorder"
-        app:layout_constraintStart_toStartOf="@id/leftBorder"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintTop_toBottomOf="@+id/registration_email_edit_text" />
 
     <Button
-        android:id="@+id/submit_button"
+        android:id="@+id/registration_submit_button"
         style="@style/button_submit"
         android:text="@string/submit"
         app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="@id/rightBorder"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        app:layout_constraintTop_toBottomOf="@id/registration_password_edit_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.atyourservice.auth.ui.AuthFlowScreenState
 import com.atyourservice.core.utils.getDetails
 import com.atyourservice.core.utils.toUiText
+import com.example.atyourservice.R
 import com.example.atyourservice.databinding.FragmentRegistrationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,10 +30,10 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.submitButton.setOnClickListener {
+        binding.registrationSubmitButton.setOnClickListener {
             viewModel.signUpWithEmailAndPassword(
-                binding.emailEditText.text.toString(),
-                binding.passwordEditText.text.toString()
+                binding.registrationEmailEditText.text.toString(),
+                binding.registrationPasswordEditText.text.toString()
             )
         }
 
@@ -52,7 +54,9 @@ class RegistrationFragment : Fragment() {
                 ).show()
             }
 
-            is AuthFlowScreenState.Success -> {}
+            is AuthFlowScreenState.Success -> {
+                findNavController().navigate(R.id.action_registration_fragment_to_search_fragment)
+            }
         }
     }
 }

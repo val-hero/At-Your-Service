@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.atyourservice.search.domain.TopExpert
 import com.example.atyourservice.R
-import com.example.atyourservice.databinding.SpecialistCardBinding
+import com.example.atyourservice.databinding.ExpertCardBinding
 
 
 class TopExpertsAdapter : RecyclerView.Adapter<TopExpertsAdapter.TopExpertsHolder>() {
@@ -17,20 +17,20 @@ class TopExpertsAdapter : RecyclerView.Adapter<TopExpertsAdapter.TopExpertsHolde
     }
 
     class TopExpertsHolder(item: View) : RecyclerView.ViewHolder(item) {
-        private val binding = SpecialistCardBinding.bind(item)
+        private val binding = ExpertCardBinding.bind(item)
         fun bind(model: TopExpert) = with(binding) {
-            imUserPhoto.setImageResource(model.idPhoto)
-            textUserName.text = model.userName
-            tvJob.text = model.userJob
-            tvCharge.text = model.paymentHour
-            tvRating.text = model.rating
-            tvReviews.text = model.reviews
+            expertCardUserImage.setImageResource(model.idPhoto)
+            expertCardUserNameText.text = model.userName
+            expertCardJobText.text = model.userJob
+            expertCardChargeText.text = model.paymentHour
+            expertCardRatingText.text = model.rating
+            expertCardReviewsText.text = model.reviews
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopExpertsHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.specialist_card, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.expert_card, parent, false)
         return TopExpertsHolder(view)
     }
 

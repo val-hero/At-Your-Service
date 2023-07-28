@@ -26,12 +26,12 @@ class SearchEmptyInputFragment : Fragment() {
 
         val adapterCategory = CategoryAdapter()
         val adapterExperts = TopExpertsAdapter()
-        binding.recyclerCategories.adapter = adapterCategory
-        binding.recyclerCategories.layoutManager =
+        binding.searchCategoriesRecycler.adapter = adapterCategory
+        binding.searchCategoriesRecycler.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         adapterCategory.setCategory(GetMock.mockItemCategory())
-        binding.recyclerTopRatedExperts.adapter = adapterExperts
-        binding.recyclerTopRatedExperts.layoutManager = LinearLayoutManager(requireContext())
+        binding.searchTopRatedExpertsRecycler.adapter = adapterExperts
+        binding.searchTopRatedExpertsRecycler.layoutManager = LinearLayoutManager(requireContext())
         adapterExperts.setExperts(GetMock.mockItemExperts())
     }
 }

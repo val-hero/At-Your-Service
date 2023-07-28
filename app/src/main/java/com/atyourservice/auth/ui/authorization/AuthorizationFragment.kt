@@ -31,18 +31,18 @@ class AuthorizationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.forgotPasswordTv.setOnClickListener {
+        binding.authForgotPasswordText.setOnClickListener {
             ResetPassDialogFragment().show(childFragmentManager, ResetPassDialogFragment.TAG)
         }
 
-        binding.createAccountTv.setOnClickListener {
+        binding.authCreateAccountText.setOnClickListener {
             findNavController().navigate(R.id.action_authorizationFragment_to_registrationFragment)
         }
 
-        binding.signInButton.setOnClickListener {
+        binding.authSignInButton.setOnClickListener {
             viewModel.signInWithEmailAndPassword(
-                binding.emailEditText.text.toString(),
-                binding.passwordEditText.text.toString()
+                binding.authEmailEditText.text.toString(),
+                binding.authPasswordEditText.text.toString()
             )
         }
 
@@ -63,7 +63,7 @@ class AuthorizationFragment : Fragment() {
             }
 
             is AuthFlowScreenState.Success -> {
-                Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_auth_fragment_to_search_fragment)
             }
         }
     }

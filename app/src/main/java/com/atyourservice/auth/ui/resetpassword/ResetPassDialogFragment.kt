@@ -37,8 +37,8 @@ class ResetPassDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSendDialogResetpass.setOnClickListener {
-            viewModel.sendNewPassword(binding.editTextDialogResetpass.text.toString())
+        binding.resetpassSendButton.setOnClickListener {
+            viewModel.sendNewPassword(binding.resetpassEmailEditText.text.toString())
         }
 
         viewModel.screenState.observe(viewLifecycleOwner) { state ->
