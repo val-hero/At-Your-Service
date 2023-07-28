@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -43,6 +44,7 @@ android {
     }
 }
 
+
 dependencies {
     //Core
     implementation("androidx.core:core-ktx:1.8.0")
@@ -72,6 +74,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
 
     //Retrofit + Gson
 //    val retrofitVer = "2.9.0"

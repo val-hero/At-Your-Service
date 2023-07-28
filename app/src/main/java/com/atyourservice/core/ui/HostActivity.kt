@@ -19,7 +19,6 @@ class HostActivity : AppCompatActivity() {
         binding = ActivityHostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         //для отображения Main_Search и фрагментов
 //        bindingExample = FragmentSearchHostBinding.inflate(layoutInflater)
 //        setContentView(bindingExample.root)
@@ -36,6 +35,20 @@ class HostActivity : AppCompatActivity() {
                 R.id.authorizationFragment -> false
                 else -> true
             }
+            
+            bottomNavigationVisibility(destination.id)
+        }
+    }
+
+    private fun bottomNavigationVisibility(screenId: Int) {
+        binding.bottomNavigationView.isVisible = when (screenId) {
+            // сюда добавляйте id экранов, на которых нужно скрыть нижнюю навигацию
+
+            R.id.authorizationFragment,
+            R.id.registrationFragment -> { false }
+
+            else -> true
+
         }
     }
 }

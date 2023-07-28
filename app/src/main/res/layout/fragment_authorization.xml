@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/light_black"
-    tools:context="com.atyourservice.auth.ui.AuthorizationFragment">
+    tools:context="com.atyourservice.auth.ui.authorization.AuthorizationFragment">
 
     <ImageView
         android:id="@+id/logo_placeholder"
