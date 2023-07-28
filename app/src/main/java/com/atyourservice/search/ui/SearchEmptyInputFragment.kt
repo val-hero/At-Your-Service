@@ -7,17 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.atyourservice.utils.GetMock
-import com.example.atyourservice.databinding.FragmentMainStartedBinding
+import com.example.atyourservice.databinding.FragmentSearchEmptyInputBinding
 
-class MainStartedFragment : Fragment() {
+class SearchEmptyInputFragment : Fragment() {
 
-    lateinit var binding: FragmentMainStartedBinding
+    lateinit var binding: FragmentSearchEmptyInputBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMainStartedBinding.inflate(inflater, container, false)
+        binding = FragmentSearchEmptyInputBinding.inflate(inflater, container, false)
         return binding.root
     }
 

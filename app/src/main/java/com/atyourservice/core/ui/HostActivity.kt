@@ -4,17 +4,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
-import com.atyourservice.search.ui.MainSearchFragment
-import com.atyourservice.search.ui.MainStartedFragment
+import com.atyourservice.search.ui.SearchEmptyInputFragment
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.ActivityHostBinding
-import com.example.atyourservice.databinding.FragmentMainSearchBinding
+import com.example.atyourservice.databinding.FragmentSearchHostBinding
 
 class HostActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHostBinding
 
     //Код для отображения Main_Search
-//    private lateinit var bindingExample: FragmentMainSearchBinding
+//    private lateinit var bindingExample: FragmentSearchHostBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHostBinding.inflate(layoutInflater)
@@ -22,10 +21,10 @@ class HostActivity : AppCompatActivity() {
 
 
         //для отображения Main_Search и фрагментов
-//        bindingExample = FragmentMainSearchBinding.inflate(layoutInflater)
+//        bindingExample = FragmentSearchHostBinding.inflate(layoutInflater)
 //        setContentView(bindingExample.root)
 //        supportFragmentManager.beginTransaction()
-//            .add(R.id.fragmentContainerView, MainStartedFragment())
+//            .add(R.id.fragment_container_view, SearchEmptyInputFragment())
 //            .commit()
 
         val navHost =

@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.atyourservice.databinding.FragmentMainSearchBinding
+import com.example.atyourservice.databinding.FragmentSearchHostBinding
 
-class MainSearchFragment : Fragment() {
+class SearchHostFragment : Fragment() {
 
-    lateinit var binding: FragmentMainSearchBinding
+    lateinit var binding: FragmentSearchHostBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMainSearchBinding.inflate(inflater, container, false)
+        binding = FragmentSearchHostBinding.inflate(inflater, container, false)
         return binding.root
     }
 
