@@ -12,19 +12,19 @@ import com.atyourservice.auth.ui.resetpassword.ResetPassDialogFragment
 import com.atyourservice.core.utils.getDetails
 import com.atyourservice.core.utils.toUiText
 import com.example.atyourservice.R
-import com.example.atyourservice.databinding.FragmentAuthorizationBinding
+import com.example.atyourservice.databinding.FragmentAuthBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AuthorizationFragment : Fragment() {
 
-    private lateinit var binding: FragmentAuthorizationBinding
+    private lateinit var binding: FragmentAuthBinding
     private val viewModel: AuthorizationViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
+        binding = FragmentAuthBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -36,7 +36,7 @@ class AuthorizationFragment : Fragment() {
         }
 
         binding.authCreateAccountText.setOnClickListener {
-            findNavController().navigate(R.id.action_authorizationFragment_to_registrationFragment)
+            findNavController().navigate(R.id.action_authFragment_to_registrationFragment)
         }
 
         binding.authSignInButton.setOnClickListener {
@@ -63,7 +63,7 @@ class AuthorizationFragment : Fragment() {
             }
 
             is AuthFlowScreenState.Success -> {
-                findNavController().navigate(R.id.action_auth_fragment_to_search_fragment)
+                findNavController().navigate(R.id.action_authFragment_to_searchHostFragment)
             }
         }
     }
