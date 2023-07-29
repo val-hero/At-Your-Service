@@ -3,21 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/authorizationFragment">
+    app:startDestination="@id/auth_fragment">
 
     <fragment
-        android:id="@+id/registrationFragment"
+        android:id="@+id/registration_fragment"
         android:name="com.atyourservice.auth.ui.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_fragment_to_search_fragment"
+            app:destination="@id/search_fragment" />
+    </fragment>
     <fragment
-        android:id="@+id/authorizationFragment"
+        android:id="@+id/auth_fragment"
         android:name="com.atyourservice.auth.ui.authorization.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" >
         <action
             android:id="@+id/action_authorizationFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            app:destination="@id/registration_fragment" />
+        <action
+            android:id="@+id/action_auth_fragment_to_search_fragment"
+            app:destination="@id/search_fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.atyourservice.search.ui.SearchHostFragment"
+        android:label="fragment_search_host"
+        tools:layout="@layout/fragment_search_host" />
 
 </navigation>

@@ -9,7 +9,7 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_user_avatar"
+        android:id="@+id/search_user_avatar_image"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         app:shapeAppearanceOverlay="@style/roundedImageView" />
 
     <TextView
-        android:id="@+id/text_welcome"
+        android:id="@+id/search_welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -29,11 +29,11 @@
         android:text="@string/text_welcome"
         android:textColor="@color/light_gray"
         android:textSize="@dimen/secondary_text"
-        app:layout_constraintStart_toEndOf="@+id/image_user_avatar"
-        app:layout_constraintTop_toTopOf="@+id/image_user_avatar" />
+        app:layout_constraintStart_toEndOf="@+id/search_user_avatar_image"
+        app:layout_constraintTop_toTopOf="@+id/search_user_avatar_image" />
 
     <TextView
-        android:id="@+id/text_user_name"
+        android:id="@+id/search_user_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-6dp"
@@ -42,12 +42,12 @@
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/text_welcome"
-        app:layout_constraintTop_toBottomOf="@+id/text_welcome"
+        app:layout_constraintStart_toStartOf="@+id/search_welcome_text"
+        app:layout_constraintTop_toBottomOf="@+id/search_welcome_text"
         tools:text="John Doe" />
 
     <ImageView
-        android:id="@+id/image_location"
+        android:id="@+id/search_location_image"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="48dp"
@@ -57,7 +57,7 @@
         app:srcCompat="@drawable/location_icon" />
 
     <TextView
-        android:id="@+id/text_location"
+        android:id="@+id/search_location_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -67,12 +67,12 @@
         android:text="@string/text_location"
         android:textColor="@color/white"
         android:textSize="@dimen/secondary_text"
-        app:layout_constraintBottom_toBottomOf="@+id/image_location"
-        app:layout_constraintEnd_toStartOf="@+id/image_location"
+        app:layout_constraintBottom_toBottomOf="@+id/search_location_image"
+        app:layout_constraintEnd_toStartOf="@+id/search_location_image"
         tools:text="@string/text_location" />
 
     <EditText
-        android:id="@+id/edit_text_search_for_service"
+        android:id="@+id/search_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -93,28 +93,28 @@
         android:textSize="@dimen/regular_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_user_avatar" />
+        app:layout_constraintTop_toBottomOf="@+id/search_user_avatar_image" />
 
     <ImageView
-        android:id="@+id/image_close"
+        android:id="@+id/search_clear_input_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_text_search_for_service"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_search_for_service"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_search_for_service"
+        app:layout_constraintBottom_toBottomOf="@+id/search_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/search_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/search_edit_text"
         app:srcCompat="@drawable/close" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
+        android:id="@+id/search_fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_search_for_service"
+        app:layout_constraintTop_toBottomOf="@+id/search_edit_text"
         app:layout_constraintVertical_bias="0.0"
         tools:layout="@layout/fragment_search_empty_input" />
 

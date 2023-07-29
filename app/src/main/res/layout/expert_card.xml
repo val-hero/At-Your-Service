@@ -6,10 +6,10 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/_10dp"
     android:background="@drawable/spicialist_card_background"
-    android:backgroundTint="#2B2B2C">
+    android:backgroundTint="@color/gray">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imUserPhoto"
+        android:id="@+id/expert_card_user_image"
         android:layout_width="@dimen/user_photo_size"
         android:layout_height="@dimen/user_photo_size"
         android:layout_margin="10dp"
@@ -22,7 +22,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/text_user_name"
+        android:id="@+id/expert_card_user_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -31,13 +31,13 @@
         android:textSize="@dimen/regular_text"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imUserPhoto"
+        app:layout_constraintStart_toEndOf="@+id/expert_card_user_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216"
         tools:text="John Doe"/>
 
     <TextView
-        android:id="@+id/tvJob"
+        android:id="@+id/expert_card_job_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -45,13 +45,13 @@
         android:textColor="@color/white"
         android:textSize="@dimen/secondary_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imUserPhoto"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_name"
+        app:layout_constraintStart_toEndOf="@+id/expert_card_user_image"
+        app:layout_constraintTop_toBottomOf="@+id/expert_card_user_name_text"
         app:layout_constraintVertical_bias="0.0"
         tools:text="Android Developer" />
 
     <TextView
-        android:id="@+id/tvCharge"
+        android:id="@+id/expert_card_charge_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
@@ -59,12 +59,12 @@
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@id/text_user_name"
+        app:layout_constraintBaseline_toBaselineOf="@id/expert_card_user_name_text"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="$ 50 / hour" />
 
     <TextView
-        android:id="@+id/tvRating"
+        android:id="@+id/expert_card_rating_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -73,18 +73,18 @@
         android:textColor="@color/white"
         android:textSize="@dimen/secondary_text"
         app:drawableStartCompat="@drawable/star_icon"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvJob"
-        app:layout_constraintEnd_toStartOf="@+id/tvReviews"
+        app:layout_constraintBaseline_toBaselineOf="@id/expert_card_job_text"
+        app:layout_constraintEnd_toStartOf="@+id/expert_card_reviews_text"
         tools:text="4.95"/>
 
     <TextView
-        android:id="@+id/tvReviews"
+        android:id="@+id/expert_card_reviews_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:textSize="@dimen/additional_text"
         android:textColor="@color/light_gray"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvRating"
+        app:layout_constraintBaseline_toBaselineOf="@id/expert_card_rating_text"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="(111)"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

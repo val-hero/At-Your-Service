@@ -11,7 +11,7 @@
     tools:context="com.atyourservice.auth.ui.resetpassword.ResetPassDialogFragment">
 
     <TextView
-        android:id="@+id/text_view_top_dialog_resetpass"
+        android:id="@+id/resetpass_title_text"
         android:layout_width="match_parent"
         android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_marginHorizontal="0dp"
@@ -27,7 +27,7 @@
         android:fontFamily="@font/kadwa_regular"/>
 
     <TextView
-        android:id="@+id/text_view_dialog_resetpass"
+        android:id="@+id/reset_pass_enter_email_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
@@ -40,9 +40,9 @@
         android:textSize="@dimen/regular_text"/>
 
     <EditText
-        android:labelFor="@id/edit_text_dialog_resetpass"
+        android:labelFor="@id/resetpass_email_edit_text"
         android:autofillHints="emailAddress"
-        android:id="@+id/edit_text_dialog_resetpass"
+        android:id="@+id/resetpass_email_edit_text"
         android:layout_width="match_parent"
         android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_marginStart="@dimen/_10dp"
@@ -59,7 +59,7 @@
         android:textSize="@dimen/regular_text"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_send_dialog_resetpass"
+        android:id="@+id/resetpass_send_button"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/vertical_size_elements_dialog_resetpass"
         android:layout_gravity="end"

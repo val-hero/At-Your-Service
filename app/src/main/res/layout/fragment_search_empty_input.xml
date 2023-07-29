@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/text_popular_companies"
+            android:id="@+id/search_popular_companies_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -26,33 +26,33 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/image_logo_company_1"
+            android:id="@+id/search_logo_company_1_image"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:background="@drawable/circle_logo_company"
-            app:layout_constraintEnd_toStartOf="@+id/image_logo_company_2"
+            app:layout_constraintEnd_toStartOf="@+id/search_logo_company_2_image"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/image_logo_company_2"
+            app:layout_constraintTop_toTopOf="@+id/search_logo_company_2_image"
             app:srcCompat="@drawable/colorfull_circle_logo_1" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/image_logo_company_2"
+            android:id="@+id/search_logo_company_2_image"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/circle_logo_company"
-            app:layout_constraintEnd_toStartOf="@+id/image_logo_company_3"
+            app:layout_constraintEnd_toStartOf="@+id/search_logo_company_3_image"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toEndOf="@+id/image_logo_company_1"
-            app:layout_constraintTop_toBottomOf="@+id/text_popular_companies"
+            app:layout_constraintStart_toEndOf="@+id/search_logo_company_1_image"
+            app:layout_constraintTop_toBottomOf="@+id/search_popular_companies_text"
             app:srcCompat="@drawable/colorfull_circle_logo_2" />
 
         <ImageButton
-            android:id="@+id/image_logo_company_3"
+            android:id="@+id/search_logo_company_3_image"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginEnd="16dp"
@@ -61,12 +61,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toEndOf="@+id/image_logo_company_2"
-            app:layout_constraintTop_toTopOf="@+id/image_logo_company_2"
+            app:layout_constraintStart_toEndOf="@+id/search_logo_company_2_image"
+            app:layout_constraintTop_toTopOf="@+id/search_logo_company_2_image"
             app:srcCompat="@drawable/colorfull_circle_logo_3" />
 
         <TextView
-            android:id="@+id/text_categories"
+            android:id="@+id/search_categories_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -76,10 +76,10 @@
             android:textColor="@color/white"
             android:textSize="@dimen/title_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_logo_company_1" />
+            app:layout_constraintTop_toBottomOf="@+id/search_logo_company_1_image" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_categories"
+            android:id="@+id/search_categories_recycler"
             android:layout_width="match_parent"
             android:layout_height="68dp"
             android:layout_marginStart="16dp"
@@ -87,11 +87,11 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_categories"
+            app:layout_constraintTop_toBottomOf="@+id/search_categories_text"
             tools:listitem="@layout/main_category_card" />
 
         <TextView
-            android:id="@+id/text_top_rated_experts"
+            android:id="@+id/search_top_rated_experts_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -101,10 +101,10 @@
             android:textColor="@color/white"
             android:textSize="@dimen/title_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_categories" />
+            app:layout_constraintTop_toBottomOf="@+id/search_categories_recycler" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_top_rated_experts"
+            android:id="@+id/search_top_rated_experts_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
@@ -114,8 +114,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_top_rated_experts"
-            tools:listitem="@layout/specialist_card" />
+            app:layout_constraintTop_toBottomOf="@+id/search_top_rated_experts_text"
+            tools:listitem="@layout/expert_card" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
