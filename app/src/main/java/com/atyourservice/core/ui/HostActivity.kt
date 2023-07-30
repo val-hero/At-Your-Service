@@ -6,9 +6,11 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.ActivityHostBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HostActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHostBinding
+    private val viewModel: HostActivityViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,13 @@ class HostActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             bottomNavigationVisibility(destination.id)
+        }
+
+        viewModel.getAuthState().observe(this) { isSignedIn ->
+            if (isSignedIn)
+                navController.navigate(R.id.searchHostFragment)
+            else
+                navController.navigate(R.id.authFragment)
         }
     }
 

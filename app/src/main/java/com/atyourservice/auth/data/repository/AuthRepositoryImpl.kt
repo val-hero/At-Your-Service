@@ -4,7 +4,13 @@ import com.atyourservice.auth.domain.repository.AuthRepository
 import com.atyourservice.core.utils.ErrorType
 import com.atyourservice.core.utils.TaskResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuth.AuthStateListener
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
@@ -46,6 +52,16 @@ class AuthRepositoryImpl(private val authClient: FirebaseAuth) : AuthRepository 
             TaskResult.Error(getAuthError(e.message))
         }
     }
+
+    override fun getAuthState(coroutineScope: CoroutineScope) = callbackFlow {
+        val authStateListener = AuthStateListener { auth ->
+            trySend(auth.currentUser != null)
+        }
+        authClient.addAuthStateListener(authStateListener)
+        awaitClose {
+            authClient.removeAuthStateListener(authStateListener)
+        }
+    }.stateIn(coroutineScope, SharingStarted.WhileSubscribed(), authClient.currentUser == null)
 
     override fun logOut() {
         authClient.signOut()
