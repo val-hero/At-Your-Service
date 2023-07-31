@@ -57,10 +57,7 @@ class RegistrationFragment : Fragment() {
             }
 
             is AuthFlowScreenState.Success -> {
-                //После успешной регистрации вернуть на фрагмент авторизации
-                //Убрать авторизацию для входа на фрагменте авторизации
-
-                findNavController().navigate(R.id.authorizationFragment)
+                findNavController().navigate(R.id.action_registrationFragment_to_searchHostFragment)
             }
         }
     }

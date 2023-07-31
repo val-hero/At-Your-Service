@@ -1,4 +1,4 @@
-package com.atyourservice.search.ui
+package com.atyourservice.search.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View

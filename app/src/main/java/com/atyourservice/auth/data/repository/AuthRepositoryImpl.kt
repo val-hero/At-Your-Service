@@ -1,5 +1,6 @@
 package com.atyourservice.auth.data.repository
 
+import com.atyourservice.User
 import com.atyourservice.auth.domain.repository.AuthRepository
 import com.atyourservice.core.utils.ErrorType
 import com.atyourservice.core.utils.TaskResult
@@ -49,6 +50,12 @@ class AuthRepositoryImpl(private val authClient: FirebaseAuth) : AuthRepository 
 
     override fun logOut() {
         authClient.signOut()
+    }
+
+    override suspend fun getCurrentUid(email: String, firstName: String, lastName: String): User {
+        return withContext(Dispatchers.IO) {
+            User(authClient.currentUser!!.uid, email, firstName, lastName)
+        }
     }
 
     private fun getAuthError(message: String?): ErrorType {

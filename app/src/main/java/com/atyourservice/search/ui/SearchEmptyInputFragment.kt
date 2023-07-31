@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.atyourservice.search.ui.adapter.CategoryAdapter
+import com.atyourservice.search.ui.adapter.TopExpertsAdapter
 import com.atyourservice.utils.GetMock
 import com.example.atyourservice.databinding.FragmentSearchEmptyInputBinding
 
