@@ -20,7 +20,7 @@
 
     <!-- radius -->
     <dimen name="edit_text_corners_radius">8dp</dimen>
-    <dimen name="button_corners_radius">12dp</dimen>
+    <dimen name="corners_12dp">12dp</dimen>
 
     <dimen name="_10dp">10dp</dimen>
 

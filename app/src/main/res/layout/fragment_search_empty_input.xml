@@ -27,43 +27,48 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/search_logo_company_1_image"
+            style="@style/CompanyLogo"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:background="@drawable/circle_logo_company"
+            android:src="@drawable/colorfull_circle_logo_1"
             app:layout_constraintEnd_toStartOf="@+id/search_logo_company_2_image"
+
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/search_logo_company_2_image"
-            app:srcCompat="@drawable/colorfull_circle_logo_1" />
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/search_logo_company_2_image"
+            style="@style/CompanyLogo"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/circle_logo_company"
+            android:src="@drawable/colorfull_circle_logo_2"
             app:layout_constraintEnd_toStartOf="@+id/search_logo_company_3_image"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@+id/search_logo_company_1_image"
             app:layout_constraintTop_toBottomOf="@+id/search_popular_companies_text"
-            app:srcCompat="@drawable/colorfull_circle_logo_2" />
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
-        <ImageButton
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/search_logo_company_3_image"
+            style="@style/CompanyLogo"
             android:layout_width="92dp"
             android:layout_height="80dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/circle_logo_company"
             android:contentDescription="@string/logo_company_3"
+            android:src="@drawable/colorfull_circle_logo_3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@+id/search_logo_company_2_image"
             app:layout_constraintTop_toTopOf="@+id/search_logo_company_2_image"
-            app:srcCompat="@drawable/colorfull_circle_logo_3" />
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
         <TextView
             android:id="@+id/search_categories_text"
