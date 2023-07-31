@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="header_title">
         <item name="android:textSize">@dimen/title_text</item>
@@ -44,6 +44,24 @@
     <style name="roundedImageView" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">27dp</item>
+    </style>
+
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+        <item name="android:fontWeight" tools:targetApi="o">500</item>
+        <item name="tabTextColor">@color/peach</item>
+        <item name="tabIndicatorColor">@color/peach</item>
+        <item name="tabIndicatorFullWidth">true</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="SelectedNavItemTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textColor">@color/peach</item>
     </style>
 
 

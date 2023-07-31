@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_registrationFragment_to_searchHostFragment"
             app:destination="@id/searchHostFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_profileUserFragment"
+            app:destination="@id/profileUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -29,11 +32,18 @@
             app:destination="@id/searchHostFragment"
             app:popUpTo="@id/authFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_authFragment_to_profileUserFragment"
+            app:destination="@id/profileUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchHostFragment"
         android:name="com.atyourservice.search.ui.SearchHostFragment"
         android:label="fragment_search_host"
         tools:layout="@layout/fragment_search_host" />
+    <fragment
+        android:id="@+id/profileUserFragment"
+        android:name="com.atyourservice.profile.ui.ProfileUserFragment"
+        android:label="ProfileUserFragment" />
 
 </navigation>
