@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.atyourservice.auth.ui.AuthFlowScreenState
 import com.atyourservice.auth.ui.resetpassword.ResetPassDialogFragment
+import com.atyourservice.core.utils.ErrorType
 import com.atyourservice.core.utils.getDetails
 import com.atyourservice.core.utils.toUiText
 import com.example.atyourservice.R
@@ -64,6 +65,7 @@ class AuthorizationFragment : Fragment() {
 
             is AuthFlowScreenState.Success -> {
                 Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_authorizationFragment_to_searchHostFragment)
             }
         }
     }

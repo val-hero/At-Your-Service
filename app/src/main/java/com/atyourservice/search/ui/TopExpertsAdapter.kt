@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.atyourservice.search.domain.TopExpert
+import com.atyourservice.search.domain.model.TopExpert
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.SpecialistCardBinding
 

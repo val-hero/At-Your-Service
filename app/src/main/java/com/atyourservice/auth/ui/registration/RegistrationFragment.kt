@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.atyourservice.auth.ui.AuthFlowScreenState
 import com.atyourservice.core.utils.getDetails
 import com.atyourservice.core.utils.toUiText
+import com.example.atyourservice.R
 import com.example.atyourservice.databinding.FragmentRegistrationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,7 +33,9 @@ class RegistrationFragment : Fragment() {
         binding.submitButton.setOnClickListener {
             viewModel.signUpWithEmailAndPassword(
                 binding.emailEditText.text.toString(),
-                binding.passwordEditText.text.toString()
+                binding.passwordEditText.text.toString(),
+                binding.firstNameEditText.text.toString(),
+                binding.lastNameEditText.text.toString()
             )
         }
 
@@ -52,7 +56,12 @@ class RegistrationFragment : Fragment() {
                 ).show()
             }
 
-            is AuthFlowScreenState.Success -> {}
+            is AuthFlowScreenState.Success -> {
+                //После успешной регистрации вернуть на фрагмент авторизации
+                //Убрать авторизацию для входа на фрагменте авторизации
+
+                findNavController().navigate(R.id.authorizationFragment)
+            }
         }
     }
 }

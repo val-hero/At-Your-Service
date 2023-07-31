@@ -4,10 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
-import com.atyourservice.search.ui.SearchEmptyInputFragment
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.ActivityHostBinding
-import com.example.atyourservice.databinding.FragmentSearchHostBinding
 
 class HostActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHostBinding
@@ -35,7 +33,7 @@ class HostActivity : AppCompatActivity() {
                 R.id.authorizationFragment -> false
                 else -> true
             }
-            
+
             bottomNavigationVisibility(destination.id)
         }
     }
@@ -45,7 +43,7 @@ class HostActivity : AppCompatActivity() {
             // сюда добавляйте id экранов, на которых нужно скрыть нижнюю навигацию
 
             R.id.authorizationFragment,
-            R.id.registrationFragment -> { false }
+            R.id.registrationFragment -> {false}
 
             else -> true
 

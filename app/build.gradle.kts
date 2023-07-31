@@ -58,7 +58,6 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     implementation("androidx.fragment:fragment-ktx:1.6.0")
-
     //MVVM
     val lifecycleVer = "2.6.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVer}")
@@ -75,6 +74,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.7.0")
 
     //Retrofit + Gson
 //    val retrofitVer = "2.9.0"

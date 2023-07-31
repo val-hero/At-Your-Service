@@ -1,7 +1,7 @@
 package com.atyourservice.utils
 
-import com.atyourservice.search.domain.Category
-import com.atyourservice.search.domain.TopExpert
+import com.atyourservice.search.domain.model.Category
+import com.atyourservice.search.domain.model.TopExpert
 import com.example.atyourservice.R
 
 class GetMock {
