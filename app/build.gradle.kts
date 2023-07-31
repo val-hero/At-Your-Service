@@ -76,6 +76,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
 
+    // Splash screen
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
     //Retrofit + Gson
 //    val retrofitVer = "2.9.0"
 //    implementation("com.google.code.gson:gson:2.10.1")
