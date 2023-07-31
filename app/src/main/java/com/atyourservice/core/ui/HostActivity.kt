@@ -38,7 +38,9 @@ class HostActivity : AppCompatActivity() {
             // сюда добавляйте id экранов, на которых нужно скрыть нижнюю навигацию
 
             R.id.authFragment,
-            R.id.registrationFragment -> { false }
+            R.id.registrationFragment -> {
+                false
+            }
 
             else -> true
 
