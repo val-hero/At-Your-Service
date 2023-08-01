@@ -15,7 +15,7 @@
         android:foreground="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/roundedImageView"
+        app:shapeAppearanceOverlay="@style/Circle"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
