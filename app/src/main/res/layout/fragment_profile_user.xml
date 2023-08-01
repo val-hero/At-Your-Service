@@ -10,7 +10,8 @@
         android:id="@+id/image_user_photo"
         android:layout_width="@dimen/user_photo_size"
         android:layout_height="@dimen/user_photo_size"
-        android:layout_margin="10dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="52dp"
         android:foreground="@drawable/circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,14 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="@dimen/_10dp"
-        android:fontFamily="@font/kadwa_font"
+        android:fontFamily="@font/kadwa_bold"
+        android:text="John Doe"
         android:textColor="@color/white"
         android:textSize="@dimen/regular_text"
-        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/image_user_photo"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="John Doe" />
+        app:layout_constraintTop_toTopOf="@+id/image_user_photo" />
 
     <TextView
         android:id="@+id/text_email_user"
@@ -47,23 +46,24 @@
         android:id="@+id/button_log_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="18dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/kadwa_font"
         android:text="Log out"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:backgroundTint="@null"
-        app:cornerRadius="20dp"
         app:layout_constraintBaseline_toBaselineOf="@id/text_user_name"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
         style="@style/TabLayout"
         android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginTop="26dp"
+        app:tabSelectedTextColor="@color/peach"
+        app:tabTextColor="@color/white"
         android:background="@color/light_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,9 +71,11 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
     </androidx.viewpager2.widget.ViewPager2>

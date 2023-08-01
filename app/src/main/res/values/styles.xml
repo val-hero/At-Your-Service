@@ -51,18 +51,18 @@
         <item name="tabMaxWidth">0dp</item>
         <item name="tabGravity">fill</item>
         <item name="android:fontWeight" tools:targetApi="o">500</item>
-        <item name="tabTextColor">@color/peach</item>
         <item name="tabIndicatorColor">@color/peach</item>
         <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabPaddingStart">1dp</item> <!-- Adjust this value as per your needs -->
+        <item name="tabPaddingEnd">1dp</item>
+
     </style>
 
     <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
+
     </style>
 
-    <style name="SelectedNavItemTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
-        <item name="android:textColor">@color/peach</item>
-    </style>
 
 
 
