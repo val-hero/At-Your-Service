@@ -38,6 +38,21 @@ class HostActivity : AppCompatActivity() {
             bottomNavigationVisibility(destination.id)
         }
 
+        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.profile_fragment -> {
+                    navController.navigate(R.id.profileUserFragment)
+                    true
+                }
+                R.id.search_fragment -> {
+                    navController.navigate(R.id.searchHostFragment)
+                    true
+                }
+                //Добавь сюда обработку клика bottomNavigation для нового фрагмента:)
+                else -> false
+            }
+        }
+
         viewModel.getAuthState().observe(this) { isSignedIn ->
             if (isSignedIn)
                 navController.navigate(R.id.searchHostFragment)
@@ -51,7 +66,9 @@ class HostActivity : AppCompatActivity() {
             // сюда добавляйте id экранов, на которых нужно скрыть нижнюю навигацию
 
             R.id.authFragment,
-            R.id.registrationFragment -> { false }
+            R.id.registrationFragment -> {
+                false
+            }
 
             else -> true
 
