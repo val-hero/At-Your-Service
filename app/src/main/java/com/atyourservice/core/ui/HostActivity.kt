@@ -3,14 +3,18 @@ package com.atyourservice.core.ui
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.ActivityHostBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HostActivity : AppCompatActivity() {
@@ -18,7 +22,6 @@ class HostActivity : AppCompatActivity() {
     private val viewModel: HostActivityViewModel by viewModel()
 
     private var isReady = false
-    private val handler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +62,9 @@ class HostActivity : AppCompatActivity() {
             else
                 navController.navigate(R.id.authFragment)
         }
+
+
+
     }
 
     private fun bottomNavigationVisibility(screenId: Int) {
@@ -87,19 +93,13 @@ class HostActivity : AppCompatActivity() {
                         true
                     } else {
                         // The content isn't ready. Suspend.
-                        downloadData(2000L)
+                        if (viewModel.getVMState()) {
+                            isReady = true
+                        }
                         false
                     }
                 }
             }
         )
     }
-
-    private fun downloadData(millis: Long) {
-        handler.postDelayed(
-            {isReady = true},
-            millis
-        )
-    }
-
 }
