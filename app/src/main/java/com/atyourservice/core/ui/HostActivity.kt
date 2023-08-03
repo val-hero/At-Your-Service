@@ -1,27 +1,21 @@
 package com.atyourservice.core.ui
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import com.example.atyourservice.R
 import com.example.atyourservice.databinding.ActivityHostBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HostActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHostBinding
     private val viewModel: HostActivityViewModel by viewModel()
 
-    private var isReady = false
+    private var isReadyForDraw = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,14 +81,14 @@ class HostActivity : AppCompatActivity() {
             object : ViewTreeObserver.OnPreDrawListener {
                 override fun onPreDraw(): Boolean {
                     // Check whether the initial data is ready.
-                    return if (isReady) {
+                    return if (isReadyForDraw) {
                         // The content is ready. Start drawing.
                         content.viewTreeObserver.removeOnPreDrawListener(this)
                         true
                     } else {
                         // The content isn't ready. Suspend.
-                        if (viewModel.getVMState()) {
-                            isReady = true
+                        if (viewModel.getViewModelReadyState()) {
+                            isReadyForDraw = true
                         }
                         false
                     }
