@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.AtYourService" parent="Base.Theme.AtYourService" />
+
+    <style name="Theme.AtYourServiceSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/gray</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_at_your_service_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.AtYourService</item>
+    </style>
 </resources>

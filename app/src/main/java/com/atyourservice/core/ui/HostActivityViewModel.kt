@@ -7,9 +7,20 @@ import com.atyourservice.auth.domain.usecase.GetAuthStateUseCase
 
 class HostActivityViewModel(private val getAuthStateUseCase: GetAuthStateUseCase) : ViewModel() {
 
+    private var viewModelIsReady = false
+    private var firstEmit = true
+
     fun getAuthState() = liveData<Boolean> {
         getAuthStateUseCase(viewModelScope).collect { state ->
             emit(state)
+
+            if (!firstEmit) {
+                viewModelIsReady = true
+            }
+
+            firstEmit = false
         }
     }
+
+    fun getViewModelReadyState() = viewModelIsReady
 }
